@@ -2,20 +2,22 @@
   <a href="" class="topics-list__item-link">
     <div class="topics-list__item-thumbnail">
       <% if (variation === 'primary') { %>
-      <div class="thumbnail thumbnail--small">
-        <span style="background-image: url('https://picsum.photos/361/149')"></span>
-      </div>
+        <span class="topics-list__item-thumbnail-main-image" style="background-image: url('https://picsum.photos/361/149')"></span>
       <% } else { %>
-        <img src="https://picsum.photos/58/58" alt="">
+        <div class="thumbnail thumbnail--small">
+          <img src="https://picsum.photos/321/321" alt="">
+        </div>
       <% } %>
     </div>
     <div class="topics-list__item-text">
       <div class="topics-list__item-text-inner">
-        <div class="topics-list__item-title">タイトル1</div>
+        <div class="topics-list__item-title"><%= topic.title %></div>
         <div class="topics-list__item-sub">
-          <div class="topics-list__item-comment"></div>
+          <div class="topics-list__item-comment" aria-label="コメント369件">369</div>
           <time class="topics-list__item-date" datetime="2019-04-14T03:36:53.000Z">4/14(日) 12:26</time>
-          <div class="label label--new"></div>
+          <% if (topic.new) { %>
+          <div class="label label--new">NEW</div>
+          <% } %>
         </div>
       </div>
     </div>

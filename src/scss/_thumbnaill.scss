@@ -1,0 +1,23 @@
+.thumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+
+  & img {
+    user-select: none;
+    vertical-align: middle;
+  }
+}
+.thumbnail--small {
+  width: 58px;
+  height: 58px;
+  position: relative;
+
+   & img {
+    max-width: 58px;
+    max-height: 58px;
+  }
+}

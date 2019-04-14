@@ -1,3 +1,18 @@
+<%
+const topics = [
+  {title: 'タイトル1'},
+  {title: 'タイトル2', new:true},
+  {title: 'タイトル3', new:true},
+  {title: 'タイトル4'},
+  {title: 'タイトル5'},
+  {title: 'タイトル6', new:true},
+  {title: 'タイトル7'},
+  {title: 'タイトル8'},
+  {title: 'タイトル9'},
+  {title: 'タイトル10'},
+];
+%>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -9,15 +24,19 @@
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
   <div class="topics">
     <ul class="topics-list">
-      <%- include('_topic-item', {variation:'primary'}) %>
-      <%- include('_topic-item', {variation:'normal'}) %>
-      <%- include('_topic-item', {variation:'normal'}) %>
+      <% topics.forEach((topic, index)=> {%>
+        <% if(index === 0) { %>
+          <%- include('_topic-item', {variation:'primary', topic: topic}) %>
+        <% }else{ %>
+          <%- include('_topic-item', {variation:'normal' , topic: topic}) %>
+        <% } %>
+      <% }) %>
     </ul>
   </div>
 </body>
