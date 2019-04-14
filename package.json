@@ -4,7 +4,7 @@
     "sync": "browser-sync start --server ./public --files='./public/*.html, ./public/css/*.css'",
     "css-build": "node-sass --include-path src/scss src/scss/style.scss public/css/style.css",
     "css-watch": "npm run css-build -- --watch",
-    "ejs": "ejs-cli --base-dir src/ejs/ '/**/**.ejs' --out ./public/"
+    "ejs": "ejs-cli --base-dir src/ejs/ '/**/[^_]*.ejs' --out ./public/"
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",
