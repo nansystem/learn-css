@@ -15,44 +15,9 @@
 <body>
   <div class="topics">
     <ul class="topics-list">
-      <li class="topics-list__item topics-list__item--primary">
-        <a href="" class="topics-list__item-link">
-          <div class="topics-list__item-thumbnail">
-            <div class="thumbnail thumbnail--small">
-              <img src="https://picsum.photos/58/58" alt="">
-            </div>
-          </div>
-          <div class="topics-list__item-text">
-            <div class="topics-list__item-text-inner">
-              <div class="topics-list__item-title">タイトル1</div>
-              <div class="topics-list__item-sub">
-                <div class="topics-list__item-comment"></div>
-                <time class="topics-list__item-date" datetime="2019-04-14T03:36:53.000Z">4/14(日) 12:26</time>
-                <div class="label label--new"></div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="topics-list__item topics-list__item--normal">
-        <a href="" class="topics-list__item-link">
-          <div class="topics-list__item-thumbnail">
-            <div class="thumbnail thumbnail--small">
-              <img src="https://picsum.photos/58/58" alt="">
-            </div>
-          </div>
-          <div class="topics-list__item-text">
-            <div class="topics-list__item-text-inner">
-              <div class="topics-list__item-title">タイトル2</div>
-              <div class="topics-list__item-sub">
-                <div class="topics-list__item-comment"></div>
-                <time class="topics-list__item-date" datetime="2019-04-14T03:36:53.000Z">4/14(日) 12:26</time>
-                <div class="label label--new"></div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </li>
+      <%- include('_topic-item', {variation:'primary'}) %>
+      <%- include('_topic-item', {variation:'normal'}) %>
+      <%- include('_topic-item', {variation:'normal'}) %>
     </ul>
   </div>
 </body>
